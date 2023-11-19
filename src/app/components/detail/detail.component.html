@@ -1,1 +1,6 @@
-<p>detail works!</p>
+<div *ngIf="item.isDetailed">
+    <h3>Occupation: {{ item.occupation }}</h3>
+    <h3>Debt: {{ item.debt }}</h3>
+    <h3>Weapon: {{ item.weapon }}</h3>
+    <button (click)="removechar()">Delete</button>
+  </div>

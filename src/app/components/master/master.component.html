@@ -1,1 +1,14 @@
-<p>master works!</p>
+<div class="box">
+<button (click)="addChar()">show</button>
+
+<div *ngFor="let item of characters">
+    <div class="border" (click)="showDetails(item)">
+      <button class="link" > {{ item.name }} </button>
+      <app-detail 
+      [charProp]="item"
+      [index]="item.id"
+      (removeCharEvent)="removechar($event)"
+      ></app-detail>
+    </div>
+</div>
+</div>
